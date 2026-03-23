@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; /* Font ala game retro */
+}
+
+.hero-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #000;
+}
+
+/* Background dengan efek blur */
+.background-blur {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('link-foto-pulau-kamu.jpg'); /* Masukkan link gambar pulau */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px) brightness(0.7); /* Efek buram dan agak gelap */
+    transform: scale(1.1); /* Mencegah pinggiran putih saat blur */
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Tulisan Spice Island yang Ngambang */
+.floating-text {
+    font-size: 5rem;
+    color: #f1c40f; /* Warna emas rempah */
+    text-shadow: 4px 4px 0px #d35400, 8px 8px 15px rgba(0,0,0,0.5);
+    letter-spacing: 5px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Animasi Ngambang (Naik Turun) */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Tombol Start ala Game */
+.start-btn {
+    margin-top: 50px;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    background: #e67e22;
+    color: white;
+    border: 4px solid #fff;
+    cursor: pointer;
+    box-shadow: 0px 5px 0px #a04000;
+    transition: all 0.2s;
+}
+
+.start-btn:hover {
+    background: #d35400;
+    transform: scale(1.1);
+}
+
+.start-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0px 1px 0px #a04000;
+}
+
+/* Transisi Fade Out */
+body {
+    transition: opacity 0.8s ease;
+}

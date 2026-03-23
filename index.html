@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Island - Start Game</title>
+    <link rel="stylesheet" href="Awal.css">
+</head>
+<body>
+    <div class="hero-container">
+        <div class="background-blur"></div>
+        
+        <div class="content">
+            <h1 class="floating-text">SPICE ISLAND</h1>
+            <button class="start-btn" onclick="startGame()">START</button>
+        </div>
+    </div>
+
+    <script>
+        function startGame() {
+            // Efek transisi sederhana sebelum pindah
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                window.location.href = "main_website.html"; // Ganti dengan link tujuanmu
+            }, 800);
+        }
+    </script>
+</body>
+</html>
